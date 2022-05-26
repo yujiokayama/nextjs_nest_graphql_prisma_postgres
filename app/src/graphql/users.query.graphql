@@ -1,0 +1,17 @@
+query GetUsers {
+  users {
+    id
+    displayName
+    username
+    createdAt
+    updatedAt
+  }
+}
+
+mutation CreateUser ($displayName: String!, $username: String!) {
+  createUser(displayName: $displayName, username: $username) {
+    displayName
+    username
+  }
+}
+
